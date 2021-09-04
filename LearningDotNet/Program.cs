@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace LearningDotNet
@@ -32,6 +33,23 @@ namespace LearningDotNet
             {
                 Console.WriteLine(setting.Value);
             }
+
+            // boxing
+            int i = 123;
+            object o = i;
+
+            Console.WriteLine(i);
+            Console.WriteLine(o);
+
+            // unboxing
+            i = (int)o;
+
+            Console.WriteLine(i);
+            Console.WriteLine(o);
+
+            ArrayList list = new ArrayList();
+            list.Add("some string");
+            String s = (String)list[0];
         }
     }
 }
