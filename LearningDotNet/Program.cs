@@ -47,9 +47,19 @@ namespace LearningDotNet
             Console.WriteLine(i);
             Console.WriteLine(o);
 
+            // ArrayList is depricated
             ArrayList list = new ArrayList();
             list.Add("some string");
             String s = (String)list[0];
+
+            Console.WriteLine(list[0]);
+
+            // Hashtables
+            Hashtable table = new Hashtable();
+            table.Add("title", "My Hashtable");
+            var t = (String)table["title"];
+            Console.WriteLine(t);
+
         }
     }
 }
