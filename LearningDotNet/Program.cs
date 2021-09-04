@@ -19,6 +19,19 @@ namespace LearningDotNet
             {
                 Console.WriteLine(customer);
             }
+
+            Console.WriteLine(customers[1]);
+
+            Dictionary<String, String> config = new Dictionary<string, string>();
+            config.Add("resolution", "1920x1080");
+            config.Add("title", "MyWebsite");
+
+            Console.WriteLine(config["title"]);
+
+            foreach (var setting in config)
+            {
+                Console.WriteLine(setting.Value);
+            }
         }
     }
 }
