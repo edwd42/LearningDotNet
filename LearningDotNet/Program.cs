@@ -79,14 +79,18 @@ namespace LearningDotNet
 
             foreach (var item in enemyGrid)
             {
-                Console.WriteLine("BitArray.item = " + item);
+                Console.WriteLine("enemyGrid.item = " + item);
             }
 
+            //Tuple<int, String, bool> myTuple = new Tuple<int, string, bool>(1, "hello myTuple", true);
+            var myTuple = Tuple.Create(1, "hello Tuple.Create()", true);
+            Console.WriteLine(myTuple.Item2);
         }
 
         static void AddItem()
         {
             items.TryAdd(1, 2);
+            Console.WriteLine("Inside AddItem()");
             Console.WriteLine("items.Count = " + items.Count);
             //Console.WriteLine(items[0]);
             //Console.WriteLine(items[1]);
