@@ -112,6 +112,15 @@ namespace LearningDotNet
 
             Console.WriteLine(myQueue.Dequeue());
             Console.WriteLine(myQueue.Peek());
+
+            //HashSet
+            var myHashSet = new HashSet<String>();
+            myHashSet.Add("hello");
+            myHashSet.Add("hello again");
+            Console.WriteLine(myHashSet.Count);
+
+            String[] h = new string[] { "hello" };
+            Console.WriteLine(myHashSet.Overlaps(h));
         }
 
         static void AddItem()
