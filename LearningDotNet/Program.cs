@@ -85,13 +85,27 @@ namespace LearningDotNet
             //Tuple<int, String, bool> myTuple = new Tuple<int, string, bool>(1, "hello myTuple", true);
             var myTuple = Tuple.Create(1, "hello Tuple.Create()", true);
             Console.WriteLine(myTuple.Item2);
+
+            //Stack = lifo
+            Stack<String> pancakes = new Stack<string>();
+            pancakes.Push("first pancake");
+            pancakes.Push("second pancake");
+            pancakes.Push("third pancake");
+            foreach (var pancake in pancakes)
+            {
+                Console.WriteLine(pancake);
+            }
+
+            Console.WriteLine(pancakes.Pop());  // removes item
+            Console.WriteLine(pancakes.Peek()); // does not remove item
+            Console.WriteLine(pancakes.Peek()); // does not remove item
         }
 
         static void AddItem()
         {
             items.TryAdd(1, 2);
-            Console.WriteLine("Inside AddItem()");
-            Console.WriteLine("items.Count = " + items.Count);
+            //Console.WriteLine("Inside AddItem()");
+            //Console.WriteLine("items.Count = " + items.Count);
             //Console.WriteLine(items[0]);
             //Console.WriteLine(items[1]);
         }
